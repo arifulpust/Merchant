@@ -1,0 +1,225 @@
+import 'package:Merchant/Constant/constant.dart';
+import 'package:Merchant/widgets/upay_add_money_card.dart';
+import 'package:Merchant/widgets/upay_more_card.dart';
+import 'package:Merchant/widgets/upay_text.dart';
+import 'package:Merchant/widgets/upay_top_page_appbar.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class MoreScreen extends StatelessWidget {
+  const MoreScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    var local = AppLocalizations.of(context);
+
+    return Container(
+      color: more_color,
+      child: Column(
+        children: <Widget>[
+          UpayTopPageAppbar(
+            text: local!.more,
+            bgColor: Colors.white,
+            textColor: blue,
+            isQRCode: false,
+            press: () {},
+          ),
+          Container(
+            height: (getHeight(context, 100) - 178).h,
+            child: SingleChildScrollView(
+                child: Column(children: <Widget>[
+              UpayText(
+                bgColor: more_color,
+                width: double.infinity,
+                text: local.settings,
+                height: 54,
+                padding: 12,
+                alignment: Alignment.bottomLeft,
+                textSize: 16,
+                press: () {},
+                isBold: false,
+                textColor: gray_11,
+              ),
+              UpayMoreCard(
+                icon: ICON_LANGUAGE,
+                text: local.changeLanguage,
+                height: 55,
+                imgHeight: 50,
+                imgWidth: 50,
+                textColor: Colors.black,
+                textSize: 16,
+                press: () {},
+                width: double.infinity,
+                bgColor: Colors.white,
+              ),
+              UpayMoreCard(
+                icon: ICON_CHANGE_PIN,
+                text: local.changePin,
+                height: 55,
+                imgHeight: 50,
+                imgWidth: 50,
+                textColor: Colors.black,
+                textSize: 16,
+                press: () {},
+                width: double.infinity,
+                bgColor: Colors.white,
+              ),
+              UpayMoreCard(
+                icon: ICON_CHANGE_PERMISSION,
+                text: local.changePermission,
+                height: 55,
+                imgHeight: 50,
+                imgWidth: 50,
+                textColor: Colors.black,
+                textSize: 16,
+                press: () {},
+                width: double.infinity,
+                bgColor: Colors.white,
+              ),
+              UpayText(
+                bgColor: more_color,
+                width: double.infinity,
+                text: local.upaySupport,
+                height: 54,
+                padding: 12,
+                alignment: Alignment.bottomLeft,
+                textSize: 16,
+                press: () {},
+                isBold: false,
+                textColor: gray_11,
+              ),
+              UpayMoreCard(
+                icon: ICON_SUPPORT,
+                text: local.twoFourHoursSupport,
+                height: 55,
+                imgHeight: 50,
+                imgWidth: 50,
+                textColor: Colors.black,
+                textSize: 16,
+                press: () {},
+                width: double.infinity,
+                bgColor: Colors.white,
+              ),
+              UpayMoreCard(
+                icon: ICON_FAQ,
+                text: local.faq,
+                height: 55,
+                imgHeight: 30,
+                imgWidth: 30,
+                textColor: Colors.black,
+                textSize: 16,
+                press: () {},
+                width: double.infinity,
+                bgColor: Colors.white,
+              ),
+              UpayMoreCard(
+                icon: ICON_HOW_TO_USE,
+                text: local.howToUse,
+                height: 55,
+                imgHeight: 50,
+                imgWidth: 50,
+                textColor: Colors.black,
+                textSize: 16,
+                press: () {},
+                width: double.infinity,
+                bgColor: Colors.white,
+              ),
+              UpayText(
+                bgColor: more_color,
+                width: double.infinity,
+                text: local.accountService,
+                height: 54,
+                padding: 12,
+                alignment: Alignment.bottomLeft,
+                textSize: 16,
+                press: () {},
+                isBold: false,
+                textColor: gray_11,
+              ),
+              UpayMoreCard(
+                icon: ICON_UPDATE_MNO,
+                text: local.mnoUpdate,
+                height: 55,
+                imgHeight: 50,
+                imgWidth: 50,
+                textColor: Colors.black,
+                textSize: 16,
+                press: () {},
+                width: double.infinity,
+                bgColor: Colors.white,
+              ),
+              UpayText(
+                bgColor: more_color,
+                width: double.infinity,
+                text: local.policy,
+                height: 54,
+                padding: 12,
+                alignment: Alignment.bottomLeft,
+                textSize: 16,
+                press: () {},
+                isBold: false,
+                textColor: gray_11,
+              ),
+              UpayMoreCard(
+                icon: ICON_TERM,
+                text: local.termsOfUse,
+                height: 55,
+                imgHeight: 50,
+                imgWidth: 50,
+                textColor: Colors.black,
+                textSize: 16,
+                press: () {},
+                width: double.infinity,
+                bgColor: Colors.white,
+              ),
+              UpayMoreCard(
+                icon: ICON_POLICY,
+                text: local.privacyPolicy,
+                height: 55,
+                imgHeight: 50,
+                imgWidth: 50,
+                textColor: Colors.black,
+                textSize: 16,
+                press: () {},
+                width: double.infinity,
+                bgColor: Colors.white,
+              ),
+              UpayMoreCard(
+                icon: ICON_GUIDELINE,
+                text: local.guideLine,
+                height: 55,
+                imgHeight: 30,
+                imgWidth: 30,
+                textColor: Colors.black,
+                textSize: 16,
+                press: () {},
+                width: double.infinity,
+                bgColor: Colors.white,
+              ),
+              UpayMoreCard(
+                icon: ICON_LOGOUT,
+                text: local.logout,
+                height: 55,
+                imgHeight: 30,
+                imgWidth: 30,
+                textColor: error_color,
+                textSize: 16,
+                press: () {},
+                width: double.infinity,
+                isRightArrow: false,
+                bgColor: more_color,
+              ),
+              Container(
+                height: 20.h,
+                color: more_color,
+                width: double.infinity,
+              )
+            ])),
+          ),
+        ],
+      ),
+    );
+  }
+}
